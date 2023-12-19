@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Log In page</title>
+    <!-- <link rel="stylesheet" href="forms.css"> -->
     <style>
          .pulser{
         width: 30px;
@@ -38,65 +39,68 @@
             left: 0;
             border-radius: 50%;
         }
-        .forms {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        input {
-            height: 40px;
-            width: 500px;
-            border-radius: 5px;
-            padding: 5px;
-        }
         body {
             display: flex;
             place-items: center;
             flex-direction: column;
         }
-        .terms-conditions {
-            height: auto;
-            width: auto;
-            border-radius: none;
-            padding: none;
-            margin-top: 30px;
-        }
-        button, a, h1 {
-            color: rgb(21, 195, 248);
-            text-decoration: none;
-        }
         button {
+            width: 500px; 
             background-color: white;
             height: 30px;
-            width: 75px;
             border-radius: 5px;
             border: 1px solid grey;
-            margin-top: 50px;
         }
         button:is(:hover, :active) {
             border-color: greenyellow;
+        }
+        button, a {
+            color: rgb(21, 195, 248);
+            text-decoration: none;
+        }
+        .name, .password {
+            height: 30px;
+            width: 500px;
+            margin-bottom: 40px;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .login {
+            width: 150px;
+            margin-left: 175px;
+        }
+        .forgot-password {
+            float: right;
+        }
+        .footer {
+            margin-top: 50px;
+        }
+        p:is(:first-of-type, :last-of-type) {
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <div class="pulser"></div>
-    <h1>Welcome!</h1>
-    <h3>Sign up for the Luxury Beauty App</h3>
+    <heading>
+    <h1>Log In to your account</h1>
+    </heading>
     <section>
-        <forms class="forms">
-            <input type="text" placeholder="Enter your name">
-            <input type="text" placeholder="Last name">
-            <input type="email" type="number" placeholder="Email/phone number">
-            <input type="password" placeholder="password">
-            <input type="password" placeholder="Confirm password">
-        </forms>
+        <form>
+            <input type="text" placeholder="Enter your name" class="name">           
+        </form>
+        <form>
+            <input type="password" placeholder="Enter your password" class="password">
+        </form>
+        <input type="checkbox" class="checkbox">Remember Me
+        <a href="#" class="forgot-password">Forgotten password?</a>
     </section>
-    <section>
-        <input type="checkbox" class="terms-conditions">By clicking on 'sign up', you're agreeing to the Luxury Beauty app's 
-        <p><a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></p>
+    <section class="footer">
+        <button type="button" class="login">Login</button>
+        <p>OR</p>
+        <button type="button">Log in with your Google account</button>
+        <p>Don't have an account?<a href="signup.html">Sign Up</a></p>
     </section>
-    <section>
-        <button type="submit"><a href="signup.html">Sign Up</a></button>
-    </section>
+
 </body>
 </html>

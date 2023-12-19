@@ -1,0 +1,29 @@
+body {
+    display: grid;
+    place-items: center;
+}
+.btn {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 10px;
+}
+button {
+    width: 250px; 
+    background-color: white;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+button:is(:hover, :active) {
+    border-color: greenyellow;
+}
+button, a {
+    color: rgb(21, 195, 248);
+    text-decoration: none;
+}
+.name, .password {
+    height: 30px;
+    width: 250px;
+    
+}
